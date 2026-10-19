@@ -20,10 +20,10 @@ public class HostelMessWalletManagement {
         }
 
         public void deduct(double amount) {
-            if (amount > balance) {
-                System.out.println("Deduct rejected: insufficient balance");
-            } else if (amount <= 0) {
+            if (amount <= 0) {
                 System.out.println("Deduction rejected: amount must be positive");
+            } else if (amount > balance) {
+                System.out.println("Deduct rejected: insufficient balance");
             } else {
                 balance -= amount;
             }
